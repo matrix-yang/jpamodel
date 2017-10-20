@@ -4,13 +4,13 @@ import javax.persistence.*;
 
 @Entity(name = "student")
 public class StudentEntity {
+    @Id
     private int id;
     private String name;
     private Integer sex;
     private String teacher;
 
-    @Id
-    @Column(name = "id")
+
     public int getId() {
         return id;
     }
@@ -19,8 +19,6 @@ public class StudentEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -29,8 +27,6 @@ public class StudentEntity {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "sex")
     public Integer getSex() {
         return sex;
     }
@@ -39,8 +35,6 @@ public class StudentEntity {
         this.sex = sex;
     }
 
-    @Basic
-    @Column(name = "teacher")
     public String getTeacher() {
         return teacher;
     }
