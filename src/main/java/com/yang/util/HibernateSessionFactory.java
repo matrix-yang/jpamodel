@@ -15,4 +15,8 @@ public class HibernateSessionFactory {
     public static EntityManager getEntityManager(){
         return entityManagerFactory.createEntityManager();
     }
+
+    public static void close(){
+        entityManagerFactory.close();
+    }
 }

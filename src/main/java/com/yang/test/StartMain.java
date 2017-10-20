@@ -3,6 +3,7 @@ package com.yang.test;
 
 import com.yang.entity.StudentEntity;
 import com.yang.dao.StudentDAO;
+import com.yang.util.HibernateSessionFactory;
 
 public class StartMain {
     public static void  main(String[] args){
@@ -10,5 +11,6 @@ public class StartMain {
         studentEntity.setName("yang");
         StudentDAO studentDAO=new StudentDAO();
         studentDAO.save(studentEntity);
+        HibernateSessionFactory.close();
     }
 }
